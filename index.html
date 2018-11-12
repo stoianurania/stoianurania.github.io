@@ -1,52 +1,92 @@
 <html>
 
 <head>
-	<title>Stoian's CV</title>
+	<title>Matei's CV</title>
 	<meta charset="UTF-8" />
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
-	<h1 style="text-align: center">CV</h1>
 
+
+	<div 
+	 id="header">
+			<h1 style="text-align: center">CV</h1>
+	
 	<p style="text-align: right; color: darkblue">Stoian Lavinia</p>
-	<img width="100" src="https://media.licdn.com/dms/image/C4E03AQFGYWRsPs6iZQ/profile-displayphoto-shrink_200_200/0?e=1544659200&v=beta&t=a7c8QbhysjGrUT6zyLzBvEEEXs2-59mfnX_dZ6LmYzU">
+	<img id="my-picture" width="100" src="https://media.licdn.com/dms/image/C4E03AQFGYWRsPs6iZQ/profile-displayphoto-shrink_200_200/0?e=1544659200&v=beta&t=a7c8QbhysjGrUT6zyLzBvEEEXs2-59mfnX_dZ6LmYzU">
 
-	<p id="motto">Web developer @ SDL, Trainer @ FastTrackIT</p>
-
-	<div>
-		<h2>Skills:</h2>
-		<ul>
-			<li class="favorite">HTML</li>
-			<li>CSS</li>
-			<li class="favorite">JS</li>
-	<div>
-		<h2>Languages</h2>
-		<table border="1">
-			<tr>
-				<td>Romanian</td>
-				<td>Nativ</td>
-			</tr>
-			<tr>
-				<td>English</td>
-				<td>Good</td>
-			</tr>
-		</table>
+	<ul id="top-menu-bar">
+		<li>
+			<a href="#" id="home-menu" >Home</a>
+		</li>
+		<li>
+			<a href="#" id="skills-menu" >Skills</a>
+		</li>
+		<li>
+			<a href="#" id="languages-menu">Languages</a>
+		</li>
+		<li>
+			<a href="#" id="contact=menu">Contact</a>
+		</li>
+	</ul>
 	</div>
 
-	<h2>Contact</h2>
-	<p>Hire me!</p>
-	<form>
-		<label>Your email</label>
-		<input name="recruterEmail" type="email">
-		<button>send</button>
-	</form>
+	<div class="test" id="content-wrap">
+		<div class="test" id="left-sidebar">
+			<!-- <div class="test" id="news">News</div> -->
+			<div class="test" id="contact">
+				<h2>Contact</h2>
+				<p>Hire me!</p>
+				<form>
+					<label>Your email</label>
+						<input name="recruterEmail" type="email">
+						<button>send</button>
+					</form>
+			</div>
+		</div>
+		<div class="test" id="content">
+			<div class="test">
+					<div class="page-block" id="home-page">
+						<h2>Wellcome</h2>
+						<p>About me.....</p>
+					</div>
 
+					<div class="page-block" id="skills-page" style="display:none;">
+
+						<h2>Skills:</h2>
+						<ul>
+							<li class="favorite">HTML</li>
+							<li>CSS</li>
+							<li class="favorite">JS</li>
+						</ul>
+					</div>
+					
+					<div class="page-block" id="languages-page" style="display:none;">
+						<h2>Languages</h2>
+						<table border="1">
+							<tr>
+								<td>Romanian</td>
+								<td>Nativ</td>
+							</tr>
+							<tr>
+								<td>English</td>
+								<td>Good</td>
+							</tr>
+						</table>
+					</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="test" id="footer">
 	<a href="https://www.linkedin.com/in/nicolaematei/">linkedin</a>
 	|
 	<a href="https://github.com/nmatei">github</a>
+	</div>
 
+	
 	<div id="app"></div>
 
 	<script src="src/index.js"></script>
