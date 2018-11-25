@@ -11,18 +11,29 @@ function show(id) {
 function showHomePage() { 
 
   hide("skills-page");
+  hide("education-page");
   hide("languages-page");
   show("home-page");
 }
 function showSkillsPage() {
   hide("home-page");
+  hide("education-page");
   hide("languages-page");
   show("skills-page");
   
 } 
+
+function showEducationPage() {
+  hide("home-page");
+  hide("skills-page");
+  hide("languages-page");
+  show("education-page");
+  
+}
 function showLanguagesPage() {
   hide("home-page");
   hide("skills-page");
+  hide("education-page");
   show("languages-page");
 }
 
@@ -30,4 +41,6 @@ function showLanguagesPage() {
 
 $("home-menu").onclick = showHomePage
 $("skills-menu").onclick = showSkillsPage;
+$("education-menu").onclick = showEducationPage;
+
 $("languages-menu").onclick = showLanguagesPage;
