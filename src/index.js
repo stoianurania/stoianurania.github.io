@@ -7,14 +7,17 @@ function hide(id) {
 function show(id) {
   $(id).style.display="block";
 }
+function hideElement(el) {
+  el.style.display='none';
 
-
-function hideAllPages() {
-  var pages=document.querySelectorAll(".page-block"); 
-  for(var i=0; i<pages.length; i++ ) {
-  pages[i].style.display='none';
-  }  
 }
+
+function hideAllPages(){
+var pages=document.querySelectorAll(".page-block");
+pages.forEach(hideElement);
+  
+}
+
 
 var links=document.querySelectorAll("#top-menu-bar a");
 for(var i=0; i<links.length; i++ ) {
@@ -24,7 +27,4 @@ for(var i=0; i<links.length; i++ ) {
     show(page +"-page");
   };
 }
-
-
-
 show('home-page');
