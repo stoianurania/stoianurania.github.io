@@ -19,7 +19,6 @@ function hideAllPages() {
 var links=document.querySelectorAll("#top-menu-bar a");
 for(var i=0; i<links.length; i++ ) {
   links[i].onclick=function() {
-    console.warn('hide all pages');
     hideAllPages();
     var page=this.getAttribute('data-page');
     console.info('show page',page);
