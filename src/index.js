@@ -21,7 +21,6 @@ for(var i=0; i<links.length; i++ ) {
   links[i].onclick=function() {
     hideAllPages();
     var page=this.getAttribute('data-page');
-    console.info('show page',page);
     show(page +"-page");
   };
 }
