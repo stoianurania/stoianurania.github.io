@@ -11,7 +11,7 @@ function show(id) {
 
 function hideAllPages() {
   var pages=document.querySelectorAll(".page-block"); 
-  for(var i=0; i<links.length; i++ ) {
+  for(var i=0; i<pages.length; i++ ) {
   pages[i].style.display='none';
   }  
 }
@@ -21,12 +21,10 @@ for(var i=0; i<links.length; i++ ) {
   links[i].onclick=function() {
     console.warn('hide all pages');
     hideAllPages();
-
     var page=this.getAttribute('data-page');
     console.info('show page',page);
     show(page +"-page");
   };
-
 }
 
 
