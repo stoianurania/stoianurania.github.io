@@ -1,8 +1,11 @@
+function $(id) {
+   return document.getElementById(id);
+}
 function hide(id) {
-  document.getElementById(id).style.display="none";
+  $(id).style.display="none";
 }
 function show(id) {
-  document.getElementById(id).style.display="block";
+  $(id).style.display="block";
 }
 
 function showHomePage() { 
@@ -25,6 +28,6 @@ function showLanguagesPage() {
 
 
 
-document.getElementById("home-menu").onclick = showHomePage
-document.getElementById("skills-menu").onclick = showSkillsPage;
-document.getElementById("languages-menu").onclick = showLanguagesPage;
+$("home-menu").onclick = showHomePage
+$("skills-menu").onclick = showSkillsPage;
+$("languages-menu").onclick = showLanguagesPage;
