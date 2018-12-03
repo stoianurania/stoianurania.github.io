@@ -1,11 +1,10 @@
-function $(id) {
+function $$(id) {
   return document.getElementById(id);
 }
-function hide(id) {
-  $(id).style.display = "none";
-}
+
+
 function show(id) {
-  $(id).style.display = "block";
+  $$(id).style.display = "block";
 }
 function hideElement(el) {
   el.style.display = 'none';
@@ -23,33 +22,35 @@ function initMenu() {
   var links = document.querySelectorAll("#top-menu-bar a");
   for (var i = 0; i < links.length; i++) {
     links[i].onclick = function () {
-      hideAllPages();
+      $('-page-block').hide();
       var page = this.getAttribute('data-page');
-      show(page + "-page");
-    }
+      $('#'+page+"-page").fadeIn();
+    };
   }
 }
 function initSkillsPage() {
-  var skills =[ 
-    ['js',7,"Andrei"],
-    ['html',6,""],
-    ['css',2,""]
-    ];
+  var skills = [
+    { name: 'js', endorsments: 7, endorsedBy: 'Andrei' },
+    { name: 'HTML', endorsments: 6, endorsedBy: '' },
+    { name: 'css', endorsments: 2, endorsedBy: '' }
+  ];
   var resultList = document.querySelector('#skills-page');
 
   var listItem = skills.map(function (skill) {
-    var endorsedBy='-Endorsed by';
-    if (skill[2]=="") {
-      endorsedBy="";
+    var endorsedBy = '-Endorsed by';
+    if (skill.endorsedBy == "") {
+      endorsedBy = "";
     }
-    return `<li>${skill[0].toUpperCase()} 
-    <span style="color: gray">-${skill[1]} ${endorsedBy}</span>
-     ${skill[2]}
+    var name=skill.name.toUpperCase();
+    return `<li>${name} 
+    <span style="color: gray">-${skill.endorsments} ${endorsedBy}</span>
+     ${skill.endorsedBy}
     </li>`;
-  })
+  });
 
   resultList.innerHTML = listItem.join('');
 }
 initMenu();
 show('skills-page');
+$('#skills-page').show();
 initSkillsPage();
