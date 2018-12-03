@@ -30,14 +30,25 @@ function initMenu() {
   }
 }
 function initSkillsPage() {
-  var skills = ['js', 'html', 'css'];
+  var skills =[ 
+    ['js',7,"Andrei"],
+    ['html',6,""],
+    ['css',2,""]
+    ];
   var resultList = document.querySelector('#skills-page');
 
-  var skillsItem = skills.map(function (skill) {
-    return `<li>${skill.toUpperCase()}</li>`;
+  var listItem = skills.map(function (skill) {
+    var endorsedBy='-Endorsed by';
+    if (skill[2]=="") {
+      endorsedBy="";
+    }
+    return `<li>${skill[0].toUpperCase()} 
+    <span style="color: gray">-${skill[1]} ${endorsedBy}</span>
+     ${skill[2]}
+    </li>`;
   })
 
-  resultList.innerHTML = skillsItem.join('');
+  resultList.innerHTML = listItem.join('');
 }
 initMenu();
 show('skills-page');
